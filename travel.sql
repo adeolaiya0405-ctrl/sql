@@ -24,3 +24,9 @@ createpassengers TABLE trips (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (passenger_id) REFERENCES passengers(id)
 );
+CREATE TABLE survivors (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    passenger_id INT NOT NULL,
+    survived BOOLEAN NOT NULL,
+    FOREIGN KEY (passenger_id) REFERENCES passengers(id)
+);
